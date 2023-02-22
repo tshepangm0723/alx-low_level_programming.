@@ -7,26 +7,30 @@
  * @n: print from this number
  */
 void print_to_98(int n)
-{
-	int i, j;
-
-	if (n <= 98)
 	{
-		for (i = n; i <= 98; i++)
+	int start;
+
+	if (n > 98)
+	{
+		for (start = n; start >= 98; start--)
 		{
-			if (i != 98)
-				printf("%d\n", i);
-			else if (i == 98)
-				printf("%d\n", i);
-		}
-		} else if (n >= 98)
-		{
-			for (j = n; j >= 98; j--)
+			printf("%d", start);
+			if (start != 98)
 			{
-				if (j != 98)
-					printf("%d\n", j);
-				else if (j == 98)
-					printf("%d\n", j);
+				printf(", ");
 			}
 		}
 	}
+	else
+	{
+		for (start = n; start <= 98; start++)
+		{
+			printf("%d", start);
+			if (start != 98)
+			{
+				printf(", ");
+			}
+		}
+	}
+	printf("\n");
+}
