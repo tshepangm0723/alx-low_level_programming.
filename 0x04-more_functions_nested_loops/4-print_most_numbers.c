@@ -4,6 +4,13 @@
  * print most numbers - Function thta print the numbers, fron 0 to 9
  * Return: 0-9 except 2 and 4
  */
+void print_most_numbers(void);
+
+/**
+ * print_most_numbers - function definition
+ * Description: print 0 - 9, without 2 & 4
+ * Return: void
+ */
 void print_most_numbers(void)
 {
 	int number;
