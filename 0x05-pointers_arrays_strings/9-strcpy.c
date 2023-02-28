@@ -11,7 +11,7 @@ char *_strcpy(char *dest, char *src);
 /**
  * _strcpy - function declaration
 * Description: copies string
-* @dest: copy to	 
+* @dest: copy to
 * @src: copy from
 * Return: string
 */
