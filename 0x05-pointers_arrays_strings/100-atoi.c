@@ -14,13 +14,13 @@ int _atoi(char *s);
  */
 int _atoi(char *s)
 {
-	int n = 1;
+	int num_sign = 1;
 	unsigned int digit = 0;
 
 	do {
 		if (*s == '-')
 		{
-			n *= -1;
+			num_sign *= -1;
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
@@ -31,5 +31,5 @@ int _atoi(char *s)
 			break;
 		}
 		} while (*s++);
-return (digit * n);
+return (digit * num_sign);
 }
