@@ -30,6 +30,6 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		return (result * pow(result, y - 1));
+		return (result * _pow_recursion(result, y - 1));
 	}
 }
