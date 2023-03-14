@@ -3,7 +3,15 @@
 #include "main.h"
 /**
  * _strdup - function that rturns pointer
- * @s: string
+ * @str: string
+ * Return: string
+ */
+
+char *_strdup(char *str);
+
+/**
+ * _strdup - function that rturns pointer
+ * @str: string
  * Return: string
  */
 
