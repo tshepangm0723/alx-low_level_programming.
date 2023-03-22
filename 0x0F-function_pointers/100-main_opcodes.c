@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  *  main - prints its own opcodes
  *  @argc: number of arguments
  *  @argv: array of arguments
- *  REturn: 0 (Success)
+ *  REturn: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
 	int bytes, j;
-	char *arr;
+	int (*address)(int, char **) = main;
+	unsigned char opcode;
 
 	if (argc != 2)
 	{
@@ -25,16 +27,17 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	arr = (char *)main;
-
 	for (j = 0; j < bytes; j++)
 	{
-		if (j == bytes - 1)
-		{
-			printf("%02hhx\n", arr[j]);
-			break;
-		}
-		printf("%02hhx", arr[j]);
+		opcode = *(unsigned char *)address;
+			printf("%.2x", opcode);
+
+			if (j == bytes - 1)
+				continue;
+		printf(" ");
+
+		address++;
 	}
+	printf("\n");
 	return (0);
 }
